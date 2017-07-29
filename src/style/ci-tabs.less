@@ -1,0 +1,52 @@
+/**
+ * @fileoverview ci-tabs
+ * @author burning (www.cafeinit.com)
+ * @version 2017.07.28
+ */
+
+.ci-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: @MARGIN;
+  border-top: 1px solid @BORDER_COLOR;
+  border-bottom: 1px solid @BORDER_COLOR;
+  background-color: @COMPONENT_COLOR;
+}
+
+.ci-tab {
+  flex: 1;
+  min-height: @MIN_HEIGHT;
+  padding: @PADDING;
+  text-align: center;
+}
+
+.ci-tab_active {
+  color: @COLOR_PRIMARY;
+}
+
+.ci-tab__text {
+  // display: inline-block;
+  // font-size: @font-size-small;
+  // line-height: 1.25em;
+}
+
+.ci-tabs_column {
+  .ci-tab {
+    border-left: 1px solid @BORDER_COLOR;
+  }
+
+  .ci-tab:first-child {
+    border-left-width: 0;
+  }
+}
+
+.ci-tabs_bottom-line {
+  .ci-tab_active {
+    border-bottom: 2px solid @COLOR_PRIMARY;
+  }
+}
+
+.ci-tabs.ci-bottom-fixed {
+  margin-bottom: 0;
+}
