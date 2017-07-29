@@ -16,8 +16,7 @@
 
 .ci-tab {
   flex: 1;
-  min-height: @MIN_HEIGHT;
-  padding: @PADDING;
+  padding: @PADDING / 2;
   text-align: center;
 }
 
@@ -25,10 +24,19 @@
   color: @COLOR_PRIMARY;
 }
 
+.ci-tab__icon {
+  display: inline-block;
+  margin-right: @MARGIN / 4;
+  font-size: 24 * @REM;
+  line-height: 24 * @REM;
+  vertical-align: middle;
+}
+
 .ci-tab__text {
-  // display: inline-block;
-  // font-size: @font-size-small;
-  // line-height: 1.25em;
+  display: inline-block;
+  font-size: @FONT_SIZE_NORMAL;
+  line-height: 24 * @REM;
+  vertical-align: middle;
 }
 
 .ci-tabs_column {
@@ -44,6 +52,20 @@
 .ci-tabs_bottom-line {
   .ci-tab_active {
     border-bottom: 2px solid @COLOR_PRIMARY;
+  }
+}
+
+.ci-tabs_icon-block {
+  .ci-tab__icon {
+    display: block;
+    margin: 0 auto @MARGIN / 4 auto;
+  }
+
+  .ci-tab__text {
+    display: block;
+    margin: 0 auto;
+    font-size: @FONT_SIZE_TINY;
+    line-height: 1;
   }
 }
 

@@ -1,6 +1,8 @@
 <template lang="pug">
   div.ci-tab(:class="isActive ? 'ci-tab_active' : ''"
     @click="$emit('click')")
+    i.ci-tab__icon(v-if="customerIcon" :class="customerIcon")
+    i.ci-tab__icon.material-icons(v-if="icon") {{icon}}
     span.ci-tab__text(v-if="text") {{text}}
     slot
 </template>
@@ -17,6 +19,16 @@ export default {
 
   props: {
     text: {
+      type: String,
+      default: ''
+    },
+
+    customerIcon: {
+      type: String,
+      default: ''
+    },
+
+    icon: {
       type: String,
       default: ''
     }
