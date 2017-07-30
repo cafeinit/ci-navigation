@@ -72,3 +72,17 @@
 .ci-tabs.ci-bottom-fixed {
   margin-bottom: 0;
 }
+
+.ci-tabs_vertical {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid @BORDER_COLOR;
+
+  .ci-tab {
+    border-bottom: 1px solid @BORDER_COLOR;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

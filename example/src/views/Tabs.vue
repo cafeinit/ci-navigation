@@ -11,6 +11,16 @@
       ci-tab(v-for="(item, index) in tabs" :key="index"
         :text="item.title" @click="tabsItemOnClick(item)")
 
+    ci-tabs(direction="vertical")
+      ci-tab(v-for="(item, index) in tabs" :key="index"
+        :text="item.title" :icon="item.icon"
+        @click="tabsItemOnClick(item)")
+
+    ci-tabs(direction="vertical")
+      ci-tab(v-for="(item, index) in tabs" :key="index"
+        :text="item.title"
+        @click="tabsItemOnClick(item)")
+
     //- ci-tabs.ci-bottom-fixed(modifier="column")
     //-   ci-tab(v-for="(item, index) in tabs" :key="index"
     //-     :text="item.title" :icon="item.icon"

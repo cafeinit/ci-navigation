@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.ci-tabs(:class="class_name")
+  div.ci-tabs(:class="className")
     slot
 </template>
 
@@ -7,7 +7,7 @@
 /**
  * @fileoverview CITabs
  * @author burning (www.cafeinit.com)
- * @version 2017.07.28
+ * @version 2017.07.30
  */
 
 export default {
@@ -22,7 +22,12 @@ export default {
     modifier: {
       type: String,
       default: ''   // column
-    }
+    },
+
+    direction: {
+      type: String,
+      default: ''   // horizontal, vertical
+    },
   },
 
   data() {
@@ -32,14 +37,20 @@ export default {
   },
 
   computed: {
-    class_name() {
+    className() {
       let name = []
       if (this.modifier) {
         name = this.modifier.split(' ')
-        name = name.map((item) => {
-          return ('ci-tabs_' + item)
-        })
       }
+
+      if (this.direction) {
+        name.push(this.direction)
+      }
+
+      name = name.map((item) => {
+        return ('ci-tabs_' + item)
+      })
+
       return name
     }
   },
