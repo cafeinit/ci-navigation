@@ -1,7 +1,7 @@
 /**
  * @fileoverview main
  * @author burning (www.cafeinit.com)
- * @version 2017.07.28
+ * @version 2017.09.07
  */
 
 import Vue from 'vue'
@@ -26,6 +26,12 @@ const router = new VueRouter({
       name: 'Index',
       path: '/index',
       component: resolve => require(['./views/Index.vue'], resolve)
+    },
+
+    {
+      name: 'Pagination',
+      path: '/pagination',
+      component: resolve => require(['./views/Pagination.vue'], resolve)
     },
 
     {

@@ -1,0 +1,46 @@
+/**
+ * @fileoverview ci-pagination
+ * @author burning (www.cafeinit.com)
+ * @version 2017.05.15
+ */
+
+.ci-pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+
+  a {
+    @size: @MIN_WIDTH / 2 * 1.5;
+
+    display: inline-block;
+    min-width: @size;
+    height: @size;
+    padding: 0 @PADDING / 2;
+    margin: 0 @PADDING / 2 0 0;
+    border: 1px solid @BORDER_COLOR;
+
+    line-height: @size;
+    font-size: @FONT_SIZE_NORMAL;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+
+    background-color: @COMPONENT_COLOR;
+    cursor: pointer;
+  }
+
+  a.material-icons {
+    font-size: @FONT_SIZE_BIG;
+    font-weight: 400;
+  }
+
+  a.ci-active {
+    background-color: @COLOR_PRIMARY;
+    color: @COLOR_WHITE;
+  }
+
+  a:last-child {
+    margin: 0;
+  }
+}

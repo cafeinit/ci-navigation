@@ -4,7 +4,9 @@
 
     ci-list
       ci-list-body
-        ci-list-cell(title="Tabs" extend_icon="chevron_right"
+        ci-list-cell(title="Pagination" extend-icon="chevron_right"
+          @click="toUrl('pagination')")
+        ci-list-cell(title="Tabs" extend-icon="chevron_right"
           @click="toUrl('tabs')")
 </template>
 

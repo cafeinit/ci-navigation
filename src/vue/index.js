@@ -1,22 +1,25 @@
 /**
  * @fileoverview index
  * @author burning (www.cafeinit.com)
- * @version 2017.07.28
+ * @version 2017.09.07
  */
 
+import CIPagination from './CIPagination.vue'
 import CITab from './CITabs/CITab.vue'
 import CITabs from './CITabs/CITabs.vue'
 
 const components = [
+  CIPagination,
   CITab,
   CITabs
 ]
 
 const CINavigation = {
   name: 'CINavigation',
-  version: '1.0.0',
+  version: '1.1.0',
   plugin: plugin,
 
+  CIPagination,
   CITab,
   CITabs
 }

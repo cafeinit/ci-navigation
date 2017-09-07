@@ -1,10 +1,8 @@
 /**
  * @fileoverview gulpfile
  * @author burning (www.cafeinit.com)
- * @version 2017.07.28
+ * @version 2017.09.07
  */
-
-'use strict'
 
 const gulp = require('gulp')
 const cleanCSS = require('gulp-clean-css')
@@ -26,7 +24,7 @@ const banner = [
 ].join('\n')
 
 // tasks
-gulp.task('default', ['build'])
+gulp.task('default', ['build', 'iconfont'])
 
 gulp.task('build', () => {
   return gulp.src([
@@ -39,4 +37,11 @@ gulp.task('build', () => {
     .pipe(header(banner, { pkg: pkg }))
     .pipe(rename('ci-navigation.css'))
     .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('iconfont', () => {
+  return gulp.src([
+    './node_modules/material-design-icons/iconfont/MaterialIcons*'
+  ])
+    .pipe(gulp.dest('./dist/iconfont'))
 })
